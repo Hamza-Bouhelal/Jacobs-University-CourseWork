@@ -1,0 +1,15 @@
+
+
+
+    function in_situ_reverse(lst)
+	n = A.length()
+	for i = 0 to n//2:       #integer quotient
+	    swap( lst[i], lst[n-1-i] )
+	return lst
+
+
+	
+	
+	
+	
+	

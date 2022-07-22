@@ -1,0 +1,29 @@
+
+
+
+Lomuto's partition average time: 0.002295 second
+Hoare's partition average time: 0.011915 second
+Median of three's partition average time: 0.003278 second
+
+while (k <= g) {
+if (arr[k] < p) {
+swap(&arr[k], &arr[j]);
+j++; 
+}
+else if (arr[k] >= q) {
+while (arr[g] > q && k < g) 
+g--; 
+swap(&arr[k], &arr[g]);
+ g--; 
+if (arr[k] < p) 
+{ swap(&arr[k], &arr[j]); 
+j++; } 
+} 
+k++; 
+} 
+j--; 
+g++;
+swap(&arr[low], &arr[j]); 
+swap(&arr[high], &arr[g]); 
+*lp = j; 
+return g;
